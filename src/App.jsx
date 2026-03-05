@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { UserProvider } from './context/UserContext';
+import WatchImg from '../public/Assets/Watch-Img.jpg'
 
 // Import Pages
 import Home from './pages/Home';
@@ -11,9 +12,10 @@ import Profile from './pages/Profile';
 import Checkout from './pages/Checkout';
 import ProductDetails from './pages/ProductDetails';
 
+
 // Sample Data for the Smart Shopping Cart
 const products = [
-  { id: 1, name: 'Smart Watch v2', price: 199, description: 'Track your health and notifications with AI precision.', category: 'Electronics' },
+  { id: 1, name: 'Smart Watch v2', price: 199, image: WatchImg,   description: 'Track your health and notifications with AI precision.', category: 'Electronics' },
   { id: 2, name: 'Bluetooth Earbuds', price: 89, description: 'Noise-canceling wireless earbuds with 24h battery life.', category: 'Audio' },
   { id: 3, name: 'Smart Scale', price: 45, description: 'Syncs weight and BMI data directly to your phone app.', category: 'Health' },
   { id: 4, name: 'RFID Wallet', price: 30, description: 'Protects your cards from digital theft with smart shielding.', category: 'Accessories' }
