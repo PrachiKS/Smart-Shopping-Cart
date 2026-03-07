@@ -7,9 +7,9 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   // Hardcoded user info for development/testing
   const [user, setUser] = useState({
-    username: 'John Doe',
-    email: 'john@example.com',
-    address: '123 Main St, Springfield',
+    username: 'Ram Prakash',
+    email: 'Ram@example.com',
+    address: '123 Main St, Delhi',
     isLoggedIn: true
   });
 

@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { UserProvider } from './context/UserContext';
-import WatchImg from '../public/Assets/Watch-Img.jpg'
-
+import WatchImg from '../src/Assets/Watch-Img.jpg';
+import BluetoothEarbuds from '../src/Assets/Bluetooth-Earbuds.jpg';
+import SmartScale from '../src/Assets/Smart-Scale.webp'
+import RFIDWallet from '../src/Assets/RFID-Wallet.webp'
 // Import Pages
 import Home from './pages/Home';
 import Cart from './pages/Cart';
@@ -16,9 +18,9 @@ import ProductDetails from './pages/ProductDetails';
 // Sample Data for the Smart Shopping Cart
 const products = [
   { id: 1, name: 'Smart Watch v2', price: 199, image: WatchImg,   description: 'Track your health and notifications with AI precision.', category: 'Electronics' },
-  { id: 2, name: 'Bluetooth Earbuds', price: 89, description: 'Noise-canceling wireless earbuds with 24h battery life.', category: 'Audio' },
-  { id: 3, name: 'Smart Scale', price: 45, description: 'Syncs weight and BMI data directly to your phone app.', category: 'Health' },
-  { id: 4, name: 'RFID Wallet', price: 30, description: 'Protects your cards from digital theft with smart shielding.', category: 'Accessories' }
+  { id: 2, name: 'Bluetooth Earbuds', price: 89, image: BluetoothEarbuds, description: 'Noise-canceling wireless earbuds with 24h battery life.', category: 'Audio' },
+  { id: 3, name: 'Smart Scale', price: 45, image: SmartScale, description: 'Syncs weight and BMI data directly to your phone app.', category: 'Health' },
+  { id: 4, name: 'RFID Wallet', price: 30, image:RFIDWallet, description: 'Protects your cards from digital theft with smart shielding.', category: 'Accessories' }
 ];
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
             {/* Simple Navigation Bar */}
             <nav className="navbar">
               <div className="nav-logo">
-                <Link to="/">SmartCart AI</Link>
+                <Link to="/">SmartCart</Link>
               </div>
               <ul className="nav-links">
                 <li><Link to="/">Shop</Link></li>
@@ -56,7 +58,7 @@ function App() {
             </main>
 
             <footer className="footer">
-              <p>&copy; 2026 Smart Shopping Cart Project</p>
+              <p>&copy; 2026 Smart Shopping Cart</p>
             </footer>
           </div>
         </Router>
